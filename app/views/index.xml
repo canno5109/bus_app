@@ -1,5 +1,19 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+	<Window id="indexWin">
+		<View id="container">
+			<View id="titleView">
+				<Label class="title">岩手県バス時刻表</Label>
+				<Label class="title">（盛岡地区）</Label>
+			</View>
+			<ScrollView id="scrollView">
+				<Button id="takizawa" class="directionBtn">滝沢方面</Button>
+				<Button id="matuzono" class="directionBtn">松園方面</Button>
+				<Button id="tonan" class="directionBtn">都南方面</Button>
+				<Button id="yahaba" class="directionBtn">矢巾方面</Button>
+				<Button id="siwa" class="directionBtn">紫波方面</Button>
+				<Button id="sizukuisi" class="directionBtn">雫石方面</Button>
+				<Button id="aeon" class="directionBtn">イオン方面</Button>
+			</ScrollView>
+		</View>
 	</Window>
 </Alloy>
