@@ -1,0 +1,25 @@
+<Alloy>
+	<NavigationWindow id="navWin">
+		<Window id="time_tableWin" onOpen="getBusStopName">
+			<ActivityIndicator id="activityIndicator" />
+			<View id="wholeView">
+				<View id="navView">
+					<Button id="backBtn" onClick="closeWin" />
+					<SearchBar id="search" />
+				</View>
+				<View class="line" />
+				<ScrollView id="scrollView">
+					<ListView id="listView">
+						<Templates>
+							<ItemTemplate name="busStopTemplate" height="40" backgroundColor="#ffffff">
+								<Label bindId="busStopName" id="busStopName" />
+								<Button bindId="detailBtn" id="detailBtn" />
+							</ItemTemplate>
+						</Templates>
+						<ListSection id="listSection" />
+					</ListView>
+				</ScrollView>
+			</View>
+		</Window>
+	</NavigationWindow>
+</Alloy>

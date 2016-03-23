@@ -1,0 +1,16 @@
+"#tabGroup": {
+  tabsBackgroundColor: "#F5F5F5",
+  backgroundColor: "#F5F5F5",
+  tintColor: "#ff3333",
+  tabsTintColor: "#ff3333"
+}
+
+"#timeTableTab": {
+ icon: "/icons/time_table.png",
+ title: "時刻表"
+}
+
+"#mapTab": {
+ icon: "/icons/map.png",
+ title: "地図"
+}

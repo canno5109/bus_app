@@ -1,18 +1,18 @@
 <Alloy>
-	<Window id="indexWin">
+	<Window id="indexWin" onFocus="resetDirectionTitle">
 		<View id="container">
 			<View id="titleView">
 				<Label class="title">岩手県バス時刻表</Label>
 				<Label class="title">（盛岡地区）</Label>
 			</View>
 			<ScrollView id="scrollView">
-				<Button id="takizawa" class="directionBtn">滝沢方面</Button>
-				<Button id="matuzono" class="directionBtn">松園方面</Button>
-				<Button id="tonan" class="directionBtn">都南方面</Button>
-				<Button id="yahaba" class="directionBtn">矢巾方面</Button>
-				<Button id="siwa" class="directionBtn">紫波方面</Button>
-				<Button id="sizukuisi" class="directionBtn">雫石方面</Button>
-				<Button id="aeon" class="directionBtn">イオン方面</Button>
+				<Button id="takizawa" class="directionBtn" onClick="openTimeTableWindow">滝沢方面</Button>
+				<Button id="matuzono" class="directionBtn" onClick="openTimeTableWindow">松園方面</Button>
+				<Button id="tonan" class="directionBtn" onClick="openTimeTableWindow">都南方面</Button>
+				<Button id="yahaba" class="directionBtn" onClick="openTimeTableWindow">矢巾方面</Button>
+				<Button id="siwa" class="directionBtn" onClick="openTimeTableWindow">紫波方面</Button>
+				<Button id="sizukuisi" class="directionBtn" onClick="openTimeTableWindow">雫石方面</Button>
+				<Button id="aeon" class="directionBtn" onClick="openTimeTableWindow">イオン方面</Button>
 			</ScrollView>
 		</View>
 	</Window>

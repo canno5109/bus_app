@@ -1,0 +1,10 @@
+<Alloy>
+	<TabGroup id="tabGroup">
+		<Tab id="timeTableTab">
+			<Require type="view" src="time_table" />
+		</Tab>
+		<Tab id="mapTab">
+			<Require type="view" src="map" />
+		</Tab>
+	</TabGroup>
+</Alloy>

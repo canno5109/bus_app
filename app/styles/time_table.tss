@@ -1,0 +1,104 @@
+"#navWin": {
+  navBarHidden: true
+}
+
+"#time_tableWin": {
+  navBarHidden: true,
+	backgroundColor: "#FF3333",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+}
+
+"#activityIndicator": {
+  message: "Loading...",
+  indicatorColor: "#FF3333",
+  width: "70%",
+  height: "30%",
+  backgroundColor: "#F5F5F5",
+  color: "#FF3333",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  borderColor: "#E6E6E6",
+  borderWidth: 5,
+  borderRadius: 10,
+  zIndex: 1
+}
+
+"#wholeView": {
+	backgroundColor: "#FF3333",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+  layout: "vertical"
+}
+
+"#navView": {
+  width: Ti.UI.FILL,
+  height: 50,
+  backgroundColor: "#FAFAFA"
+},
+"#navView[platform=ios]": {
+  top: 20
+}
+
+"#backBtn": {
+  backgroundImage: "/icons/back.png",
+  backgroundColor: "transparent",
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  left: 8
+}
+
+"#search": {
+  barColor: "#F5F5F5",
+  borderColor: "#F5F5F5",
+  borderRadius: 5,
+  showCancel: true,
+  left: 40,
+  right: 5,
+  width: Ti.UI.FILL,
+  height: 43,
+  hintText: "バス停を検索"
+}
+
+".line": {
+  width: Ti.UI.FILL,
+  height: 1,
+  borderColor: "#E6E6E6"
+}
+
+"#scrollView": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FF3333"
+}
+
+"#listView": {
+  top: 0,
+  separatorColor: "#E6E6E6",
+  separatorInsets: { right: 0, left: 0 },
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF"
+}
+
+"#busStopName": {
+  left: 10,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 14
+  }
+}
+
+"#detailBtn": {
+  left: 10,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#6699FF",
+  font: {
+    fontSize: 14
+  }
+}

@@ -16,6 +16,8 @@
     <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
     <plist>
       <dict>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string></string>
         <key>UISupportedInterfaceOrientations~iphone</key>
         <array>
           <string>UIInterfaceOrientationPortrait</string>
@@ -50,6 +52,8 @@
     <theme>default</theme>
   </mobileweb>
   <modules>
+    <module platform="iphone">ti.map</module>
+    <module platform="android">ti.map</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
