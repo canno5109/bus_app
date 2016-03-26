@@ -1,25 +1,35 @@
 <Alloy>
-	<NavigationWindow id="navWin">
-		<Window id="time_tableWin" onOpen="getBusStopName">
-			<ActivityIndicator id="activityIndicator" />
-			<View id="wholeView">
-				<View id="navView">
-					<Button id="backBtn" onClick="closeWin" />
-					<SearchBar id="search" />
-				</View>
-				<View class="line" />
-				<ScrollView id="scrollView">
-					<ListView id="listView">
-						<Templates>
-							<ItemTemplate name="busStopTemplate" height="40" backgroundColor="#ffffff">
-								<Label bindId="busStopName" id="busStopName" />
-								<Button bindId="detailBtn" id="detailBtn" />
-							</ItemTemplate>
-						</Templates>
-						<ListSection id="listSection" />
-					</ListView>
-				</ScrollView>
+	<Window id="time_tableWin" onOpen="getDateUrl">
+		<ActivityIndicator id="activityIndicator" />
+		<View id="wholeView">
+			<View id="navView">
+				<Button id="backBtn" onClick="closeWin" />
+				<Label id="timeTableTitle">時刻表（平日）</Label>
 			</View>
-		</Window>
-	</NavigationWindow>
+			<View class="line" />
+			<Label id="ride_getoff_Title" />
+			<View class="line" />
+			<View id="buttonBarView">
+				<ButtonBar id="buttonBar" platform="ios" onClick="changeTimeTable">
+					<Labels>
+						<Label>平日</Label>
+						<Label>土曜</Label>
+						<Label>休日</Label>
+					</Labels>
+				</ButtonBar>
+			</View>
+			<View class="line" />
+			<ScrollView id="scrollView">
+				<ListView id="listView">
+					<Templates>
+						<ItemTemplate name="timeTableTemplate" height="40" backgroundColor="#ffffff">
+							<Label bindId="hour" id="hour" />
+							<Label bindId="times" id="times" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection id="listSection" />
+				</ListView>
+			</ScrollView>
+		</View>
+	</Window>
 </Alloy>

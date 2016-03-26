@@ -1,0 +1,25 @@
+<Alloy>
+	<NavigationWindow id="navWin">
+		<Window id="rideWin" onOpen="getBusStopName">
+			<ActivityIndicator id="activityIndicator" />
+			<View id="wholeView">
+				<View id="navView">
+					<Label id="rideTitle">乗車停留所選択</Label>
+				</View>
+				<View class="line" />
+				<ScrollView id="scrollView">
+					<ListView id="listView" onItemclick="openGettingOffWin">
+						<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
+						<Templates>
+							<ItemTemplate name="busStopTemplate">
+								<Label bindId="busStopName" id="busStopName" />
+								<Button bindId="detailBtn" id="detailBtn" />
+							</ItemTemplate>
+						</Templates>
+						<ListSection id="listSection" />
+					</ListView>
+				</ScrollView>
+			</View>
+		</Window>
+	</NavigationWindow>
+</Alloy>

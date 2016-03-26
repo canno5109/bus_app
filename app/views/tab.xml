@@ -1,10 +1,10 @@
 <Alloy>
-	<TabGroup id="tabGroup">
-		<Tab id="timeTableTab">
-			<Require type="view" src="time_table" />
-		</Tab>
-		<Tab id="mapTab">
-			<Require type="view" src="map" />
-		</Tab>
-	</TabGroup>
+		<TabGroup id="tabGroup">
+			<Tab id="rideTab">
+				<Require type="view" src="ride" />
+			</Tab>
+			<Tab id="mapTab">
+				<Require type="view" src="map" />
+			</Tab>
+		</TabGroup>
 </Alloy>

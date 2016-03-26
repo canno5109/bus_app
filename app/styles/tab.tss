@@ -5,7 +5,7 @@
   tabsTintColor: "#ff3333"
 }
 
-"#timeTableTab": {
+"#rideTab": {
  icon: "/icons/time_table.png",
  title: "時刻表"
 }

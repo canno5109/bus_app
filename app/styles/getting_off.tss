@@ -1,4 +1,4 @@
-"#time_tableWin": {
+"#gettingOffWin": {
   navBarHidden: true,
 	backgroundColor: "#FF3333",
 	width: Ti.UI.FILL,
@@ -41,12 +41,12 @@
 "#backBtn": {
   backgroundImage: "/icons/back.png",
   backgroundColor: "transparent",
-  width: Ti.UI.SIZE,
-  height: Ti.UI.SIZE,
+  width: 30,
+  height: 30,
   left: 8
 }
 
-"#timeTableTitle": {
+"#gettingOffTitle": {
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
   color: "#333333",
@@ -62,29 +62,23 @@
   borderColor: "#E6E6E6"
 }
 
-"#ride_getoff_Title": {
+"#rideTitle": {
   color: "#333333",
   width: Ti.UI.FILL,
   height: 30,
   textAlign: "center",
   font: {
-    fontSize: 11
+    fontSize: 14
   },
   backgroundColor: "#F5F5F5"
 }
 
-"#buttonBarView": {
+"#search": {
+  showCancel: true,
+  bubbleParent: false,
   width: Ti.UI.FILL,
-  height: 30,
-  backgroundColor: "#F5F5F5"
-}
-
-"#buttonBar": {
-  left: 1,
-  right: 1,
-  height: Ti.UI.FILL,
-  width: Ti.UI.FILL,
-  backgroundColor: "#FF3333",
+  height: 43,
+  hintText: "バス停を検索",
   touchEnabled: false
 }
 
@@ -100,26 +94,31 @@
   separatorInsets: { right: 0, left: 0 },
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
+  bubbleParent: false,
   backgroundColor: "#FFFFFF",
   touchEnabled: false
 }
 
-"#hour": {
+"ItemTemplate": {
+  selectedBackgroundColor: "#FFFFFF"
+}
+
+"#busStopName": {
   left: 15,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
   color: "#333333",
   font: {
-    fontSize: 20
+    fontSize: 14
   }
 }
 
-"#times": {
-  right: 20,
+"#detailBtn": {
+  right: 10,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
-  color: "#333333",
+  color: "#999999",
   font: {
-    fontSize: 14
+    fontSize: 18
   }
 }
