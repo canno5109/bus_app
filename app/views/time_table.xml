@@ -22,7 +22,7 @@
 			<ScrollView id="scrollView">
 				<ListView id="listView">
 					<Templates>
-						<ItemTemplate name="timeTableTemplate" height="40" backgroundColor="#ffffff">
+						<ItemTemplate name="timeTableTemplate">
 							<Label bindId="hour" id="hour" />
 							<Label bindId="times" id="times" />
 						</ItemTemplate>

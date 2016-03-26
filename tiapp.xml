@@ -2,13 +2,13 @@
   <id>com.canno.bus</id>
   <name>bus_app</name>
   <version>1.0</version>
-  <publisher>not specified</publisher>
-  <url/>
+  <publisher>Yuma Kanno</publisher>
+  <url>https://www.facebook.com/canno.yuma</url>
   <description/>
-  <copyright>not specified</copyright>
+  <copyright>Copyright © 2016 canno</copyright>
   <icon>appicon.png</icon>
-  <fullscreen>false</fullscreen>
-  <navbar-hidden>false</navbar-hidden>
+  <fullscreen>true</fullscreen>
+  <navbar-hidden>true</navbar-hidden>
   <analytics>true</analytics>
   <guid>e2dd6fe4-2c05-4444-a72f-cc9cde60b196</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>

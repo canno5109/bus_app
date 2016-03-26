@@ -104,6 +104,12 @@
   touchEnabled: false
 }
 
+"ItemTemplate": {
+  selectedBackgroundColor: "#FFFFFF",
+  height: 40,
+  backgroundColor: "#FFFFFF"
+ }
+
 "#hour": {
   left: 15,
   width: Ti.UI.SIZE,
