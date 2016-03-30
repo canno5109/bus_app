@@ -91,7 +91,8 @@
 "#listView": {
   top: 0,
   separatorColor: "#E6E6E6",
-  separatorInsets: { right: 0, left: 0 },
+  //separatorInsets: { right: 0, left: 0 },
+  tableSeparatorInsets: { right: 0, left: 0 },
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   bubbleParent: false,
