@@ -3,6 +3,7 @@ var args = $.args;
 var dates = [], weekdays = [], holidays = [], saturdays = [];
 $.ride_getoff_Title.setText("乗車停留所：" + args.rideName + "\n" + "降車停留所：" + args.getting_offName);
 $.activityIndicator.show();
+var date = new Date().getDay();
 
 function sendGoogleAnalytics() {
   Alloy.Globals.google_analytics_trackScreen("時刻表画面");
@@ -60,7 +61,6 @@ function loadWeekdayTimeTable() {
         };
         weekdays.push(weekdayColumn);
       }
-      $.listSection.setItems(weekdays);
       loadSaturdayTimeTable();
     },
     onerror : function(e) {
@@ -132,6 +132,17 @@ function loadHolidayTimeTable() {
       if (timetableCollection.length > 0) {
         $.registerBtn.setBackgroundImage("/icons/star-full.png");
         $.registerBtn.saved = true;
+      }
+      switch(date) {
+        case 0:
+        $.listSection.setItems(holidays);
+        break;
+        case 6:
+        $.listSection.setItems(saturdays);
+        break;
+        default:
+        $.listSection.setItems(weekdays);
+        break;
       }
       $.listView.setTouchEnabled(true);
       $.buttonBar.setTouchEnabled(true);
