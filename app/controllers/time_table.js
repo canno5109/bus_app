@@ -123,8 +123,15 @@ function loadHolidayTimeTable() {
         };
         holidays.push(holidayColumn);
       }
+      var timetableCollection = Alloy.createCollection("timetable");
+      timetableCollection.fetch({query: { statement: 'SELECT * FROM timetable WHERE rideName = ? AND gettingOffName = ?', params: [args.rideName, args.getting_offName] }});
+      if (timetableCollection.length > 0) {
+        $.registerBtn.setBackgroundImage("/icons/star-full.png");
+        $.registerBtn.saved = true;
+      }
       $.listView.setTouchEnabled(true);
       $.buttonBar.setTouchEnabled(true);
+      $.registerBtn.setTouchEnabled(true);
       $.activityIndicator.hide();
     },
     onerror : function(e) {
@@ -143,21 +150,45 @@ function loadHolidayTimeTable() {
 function changeTimeTable(e) {
   switch (e.index) {
     case 0:
-      $.timeTableTitle.setText("時刻表（平日）");
+    $.timeTableTitle.setText("時刻表（平日）");
     $.listSection.setItems(weekdays);
     break;
     case 1:
-      $.timeTableTitle.setText("時刻表（土曜）");
+    $.timeTableTitle.setText("時刻表（土曜）");
     $.listSection.setItems(saturdays);
     break;
     case 2:
-      $.timeTableTitle.setText("時刻表（休日）");
+    $.timeTableTitle.setText("時刻表（休日）");
     $.listSection.setItems(holidays);
     break;
     default:
-      $.timeTableTitle.setText("時刻表（平日）");
+    $.timeTableTitle.setText("時刻表（平日）");
     $.listSection.setItems(weekdays);
     break;
+  }
+}
+
+function saveTimeTable(e) {
+  if ($.registerBtn.saved == false) {
+    var tModel = Alloy.createModel("timetable");
+    tModel.set({
+      rideName: $.args.rideName,
+      gettingOffName: $.args.getting_offName,
+      weekdayUrl: dates[0].url,
+      saturdayUrl: dates[1].url,
+      holidayUrl: dates[2].url
+    });
+    tModel.save();
+    $.registerBtn.setBackgroundImage("/icons/star-full.png");
+    $.registerBtn.saved = true;
+  } else {
+    var timetableCollection = Alloy.createCollection("timetable");
+    timetableCollection.fetch({query: { statement: 'SELECT * FROM timetable WHERE rideName = ? AND gettingOffName = ?', params: [args.rideName, args.getting_offName] }});
+    timetableCollection.each(function(t) {
+      t.destroy();
+    });
+    $.registerBtn.setBackgroundImage("/icons/star-empty.png");
+    $.registerBtn.saved = false;
   }
 }
 

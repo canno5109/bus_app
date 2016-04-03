@@ -1,8 +1,14 @@
 {
 	"global": {},
-	"env:development": {},
-	"env:test": {},
-	"env:production": {},
+	"env:development": {
+		"trackingId": "UA-75802582-1"
+	},
+	"env:test": {
+		"trackingId": "UA-75802582-1"
+	},
+	"env:production": {
+		"trackingId": "UA-75802582-2"
+	},
 	"os:android": {},
 	"os:blackberry": {},
 	"os:ios": {},

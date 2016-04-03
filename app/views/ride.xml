@@ -6,7 +6,6 @@
 				<View id="navView">
 					<Label id="rideTitle">乗車停留所選択</Label>
 				</View>
-				<View class="line" />
 				<ScrollView id="scrollView">
 					<ListView id="listView" onItemclick="openGettingOffWin">
 						<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />

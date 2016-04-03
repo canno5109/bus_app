@@ -4,18 +4,18 @@
 
 "#rideWin": {
   navBarHidden: true,
-	backgroundColor: "#FF3333",
+	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
 }
 
 "#activityIndicator": {
   message: "Loading...",
-  indicatorColor: "#FF3333",
+  indicatorColor: "#ffa500",
   width: "50%",
   height: "20%",
   backgroundColor: "#F5F5F5",
-  color: "#FF3333",
+  color: "#ffa500",
   font: {
     fontSize: 18,
     fontWeight: "bold"
@@ -27,7 +27,7 @@
 }
 
 "#wholeView": {
-	backgroundColor: "#FF3333",
+	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
   layout: "vertical"
@@ -36,7 +36,7 @@
 "#navView": {
   width: Ti.UI.FILL,
   height: 30,
-  backgroundColor: "#FAFAFA"
+  backgroundColor: "#ffa500"
 },
 "#navView[platform=ios]": {
   top: 20
@@ -69,7 +69,7 @@
 "#scrollView": {
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
-  backgroundColor: "#FF3333"
+  backgroundColor: "#ffffff"
 }
 
 "#listView": {

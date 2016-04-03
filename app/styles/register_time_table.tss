@@ -1,0 +1,142 @@
+"#time_tableWin": {
+  navBarHidden: true,
+	backgroundColor: "#ffa500",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+}
+
+"#activityIndicator": {
+  message: "Loading...",
+  indicatorColor: "#ffa500",
+  width: "50%",
+  height: "20%",
+  backgroundColor: "#F5F5F5",
+  color: "#ffa500",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  borderColor: "#E6E6E6",
+  borderWidth: 5,
+  borderRadius: 10,
+  zIndex: 1
+}
+
+"#wholeView": {
+	backgroundColor: "#ffa500",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+  layout: "vertical"
+}
+
+"#navView": {
+  width: Ti.UI.FILL,
+  height: 30,
+  backgroundColor: "#ffa500"
+},
+"#navView[platform=ios]": {
+  top: 20
+}
+
+"#backBtn": {
+  backgroundImage: "/icons/back.png",
+  backgroundColor: "transparent",
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  left: 8
+}
+
+"#timeTableTitle": {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  }
+}
+
+"#registerBtn": {
+  backgroundImage: "/icons/star-empty.png",
+  backgroundColor: "transparent",
+  width: 20,
+  height: 20,
+  saved: false,
+  right: 8,
+  touchEnabled: false
+}
+
+".line": {
+  width: Ti.UI.FILL,
+  height: 1,
+  borderColor: "#E6E6E6"
+}
+
+"#ride_getoff_Title": {
+  color: "#333333",
+  width: Ti.UI.FILL,
+  height: 30,
+  textAlign: "center",
+  font: {
+    fontSize: 11
+  },
+  backgroundColor: "#ffa500"
+}
+
+"#buttonBarView": {
+  width: Ti.UI.FILL,
+  height: 30,
+  backgroundColor: "#F5F5F5"
+}
+
+"#buttonBar": {
+  left: 1,
+  right: 1,
+  height: Ti.UI.FILL,
+  width: Ti.UI.FILL,
+  backgroundColor: "#000000",
+  touchEnabled: false
+}
+
+"#scrollView": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#ffffff"
+}
+
+"#listView": {
+  top: 0,
+  separatorColor: "#E6E6E6",
+  //separatorInsets: { right: 0, left: 0 },
+  tableSeparatorInsets: { right: 0, left: 0 },
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF",
+  touchEnabled: false
+}
+
+"ItemTemplate": {
+  selectedBackgroundColor: "#FFFFFF",
+  height: 40,
+  backgroundColor: "#FFFFFF"
+ }
+
+"#hour": {
+  left: 15,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 20
+  }
+}
+
+"#times": {
+  right: 20,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 14
+  }
+}

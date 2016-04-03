@@ -6,9 +6,7 @@
 				<Button id="backBtn" onClick="closeWin" />
 				<Label id="gettingOffTitle">降車停留所選択</Label>
 			</View>
-			<View class="line" />
 			<Label id="rideTitle" />
-			<View class="line" />
 			<ScrollView id="scrollView">
 				<ListView id="listView" onItemclick="openTimeTableWin">
 					<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />

@@ -1,0 +1,34 @@
+<Alloy>
+	<Window id="time_tableWin" onOpen="loadWeekdayTimeTable">
+		<ActivityIndicator id="activityIndicator" />
+		<View id="wholeView">
+			<View id="navView">
+				<Button id="backBtn" onClick="closeWin" />
+				<Label id="timeTableTitle">時刻表（平日）</Label>
+				<Button id="registerBtn" onClick="saveTimeTable" />
+			</View>
+			<Label id="ride_getoff_Title" />
+			<View class="line" />
+			<View id="buttonBarView">
+				<ButtonBar id="buttonBar" platform="ios" onClick="changeTimeTable">
+					<Labels>
+						<Label>平日</Label>
+						<Label>土曜</Label>
+						<Label>休日</Label>
+					</Labels>
+				</ButtonBar>
+			</View>
+			<ScrollView id="scrollView">
+				<ListView id="listView">
+					<Templates>
+						<ItemTemplate name="timeTableTemplate">
+							<Label bindId="hour" id="hour" />
+							<Label bindId="times" id="times" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection id="listSection" />
+				</ListView>
+			</ScrollView>
+		</View>
+	</Window>
+</Alloy>

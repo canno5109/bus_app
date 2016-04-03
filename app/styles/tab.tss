@@ -1,16 +1,21 @@
 "#tabGroup": {
-  tabsBackgroundColor: "#F5F5F5",
-  backgroundColor: "#F5F5F5",
-  tintColor: "#ff3333",
-  tabsTintColor: "#ff3333"
+  tabsBackgroundColor: "#ffa500",
+  backgroundColor: "#ffa500",
+  tintColor: "#ffffff",
+  tabsTintColor: "#ffffff"
 }
 
 "#rideTab": {
- icon: "/icons/time_table.png",
+ icon: "/icons/clock.png",
  title: "時刻表"
 }
 
 "#mapTab": {
  icon: "/icons/map.png",
  title: "地図"
+}
+
+"#registerTab": {
+  icon: "/icons/time_table.png",
+  title: "お気に入り"
 }

@@ -1,0 +1,133 @@
+"#navWin": {
+  navBarHidden: true
+}
+
+"#registerWin": {
+  navBarHidden: true,
+	backgroundColor: "#ffa500",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+}
+
+
+
+"#activityIndicator": {
+  message: "Loading...",
+  indicatorColor: "#ffa500",
+  width: "50%",
+  height: "20%",
+  backgroundColor: "#F5F5F5",
+  color: "#ffa500",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  borderColor: "#E6E6E6",
+  borderWidth: 5,
+  borderRadius: 10,
+  zIndex: 1
+}
+
+"#wholeView": {
+	backgroundColor: "#ffa500",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+  layout: "vertical"
+}
+
+"#navView": {
+  width: Ti.UI.FILL,
+  height: 30,
+  backgroundColor: "#ffa500"
+},
+"#navView[platform=ios]": {
+  top: 20
+}
+
+"#registerTitle": {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  }
+}
+
+".line": {
+  width: Ti.UI.FILL,
+  height: 1,
+  borderColor: "#E6E6E6"
+}
+
+"#search": {
+  showCancel: true,
+  width: Ti.UI.FILL,
+  height: 43,
+  hintText: "バス停を検索",
+  touchEnabled: false
+}
+
+"#scrollView": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#ffa500"
+}
+
+"#listView": {
+  top: 0,
+  separatorColor: "#E6E6E6",
+  //separatorInsets: { right: 0, left: 0 },
+  tableSeparatorInsets: { right: 0, left: 0 },
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  bubbleParent: false,
+  backgroundColor: "#FFFFFF",
+  touchEnabled: false,
+  keepSectionsInSearch: true
+}
+
+"ItemTemplate": {
+  selectedBackgroundColor: "#FFFFFF",
+  height: 80,
+  backgroundColor: "#FFFFFF"
+ }
+
+"#rideBusStopName": {
+  top: 10,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 14
+  }
+}
+
+"#arrow": {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 14
+  }
+}
+
+"#gettingOffBusStopName": {
+  bottom: 10,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#333333",
+  font: {
+    fontSize: 14
+  }
+}
+
+"#detailBtn": {
+  right: 10,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#999999",
+  font: {
+    fontSize: 18
+  }
+}

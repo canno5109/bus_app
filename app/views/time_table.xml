@@ -5,8 +5,8 @@
 			<View id="navView">
 				<Button id="backBtn" onClick="closeWin" />
 				<Label id="timeTableTitle">時刻表（平日）</Label>
+				<Button id="registerBtn" onClick="saveTimeTable" />
 			</View>
-			<View class="line" />
 			<Label id="ride_getoff_Title" />
 			<View class="line" />
 			<View id="buttonBarView">
@@ -18,7 +18,6 @@
 					</Labels>
 				</ButtonBar>
 			</View>
-			<View class="line" />
 			<ScrollView id="scrollView">
 				<ListView id="listView">
 					<Templates>

@@ -3,8 +3,8 @@
 			<Tab id="rideTab">
 				<Require type="view" src="ride" />
 			</Tab>
-			<Tab id="mapTab">
-				<Require type="view" src="map" />
+			<Tab id="registerTab">
+				<Require type="view" src="register" />
 			</Tab>
 		</TabGroup>
 </Alloy>
