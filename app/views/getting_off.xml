@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="gettingOffWin" onOpen="getBusStopName">
+	<Window id="gettingOffWin" onOpen="getBusStopName" onFocus="sendGoogleAnalytics">
 		<ActivityIndicator id="activityIndicator" />
 		<View id="wholeView">
 			<View id="navView">

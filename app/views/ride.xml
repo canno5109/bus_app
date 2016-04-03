@@ -1,6 +1,6 @@
 <Alloy>
 	<NavigationWindow id="navWin">
-		<Window id="rideWin" onOpen="getBusStopName">
+		<Window id="rideWin" onOpen="getBusStopName" onFocus="sendGoogleAnalytics">
 			<ActivityIndicator id="activityIndicator" />
 			<View id="wholeView">
 				<View id="navView">

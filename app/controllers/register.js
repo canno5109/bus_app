@@ -2,6 +2,7 @@
 var args = $.args;
 
 function loadBusList() {
+	Alloy.Globals.google_analytics_trackScreen("お気に入りバス停リスト画面");
 	$.search.setTouchEnabled(false);
 	$.listView.setTouchEnabled(false);
 	var timetableModelCollection = Alloy.createCollection("timetable");

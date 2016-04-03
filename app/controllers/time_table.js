@@ -1,13 +1,17 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 var dates = [], weekdays = [], holidays = [], saturdays = [];
-$.ride_getoff_Title.setText("乗車停留所：" + $.args.rideName + "\n" + "降車停留所：" + $.args.getting_offName);
+$.ride_getoff_Title.setText("乗車停留所：" + args.rideName + "\n" + "降車停留所：" + args.getting_offName);
 $.activityIndicator.show();
+
+function sendGoogleAnalytics() {
+  Alloy.Globals.google_analytics_trackScreen("時刻表画面");
+}
 
 // 平日・土曜・休日の時刻表URLを取得
 function getDateUrl() {
   var url = "https://cryptic-journey-10666.herokuapp.com/system/relevant_system.json";
-  Ti.API.debug(encodeURI(url + "?url=" + "http://gps.iwatebus.or.jp/bls/pc/" + $.args.url));
+  Ti.API.debug(encodeURI(url + "?url=" + "http://gps.iwatebus.or.jp/bls/pc/" + args.url));
   var xhr = Ti.Network.createHTTPClient({
     onload : function() {
       var json = JSON.parse(this.responseText);
@@ -33,7 +37,7 @@ function getDateUrl() {
     },
     timeout : 10000
   });
-  xhr.open("GET", encodeURI(url + "?url=" + "http://gps.iwatebus.or.jp/bls/pc/" + $.args.url));
+  xhr.open("GET", encodeURI(url + "?url=" + "http://gps.iwatebus.or.jp/bls/pc/" + args.url));
   xhr.send();
 }
 
@@ -172,13 +176,14 @@ function saveTimeTable(e) {
   if ($.registerBtn.saved == false) {
     var tModel = Alloy.createModel("timetable");
     tModel.set({
-      rideName: $.args.rideName,
-      gettingOffName: $.args.getting_offName,
+      rideName: args.rideName,
+      gettingOffName: args.getting_offName,
       weekdayUrl: dates[0].url,
       saturdayUrl: dates[1].url,
       holidayUrl: dates[2].url
     });
     tModel.save();
+    Alloy.Globals.google_analytics_trackEvent('時刻表登録', 'click', args.rideName + " → " + args.getting_offName);
     $.registerBtn.setBackgroundImage("/icons/star-full.png");
     $.registerBtn.saved = true;
   } else {

@@ -4,6 +4,10 @@ $.activityIndicator.show();
 $.rideTitle.setText("乗車停留所：" + $.args.name);
 Ti.API.debug("http://gps.iwatebus.or.jp/bls/pc/" + $.args.url);
 
+function sendGoogleAnalytics() {
+  Alloy.Globals.google_analytics_trackScreen("降車停留所選択画面");
+}
+
 // バス停の名前を取得する
 function getBusStopName() {
   var busStopNames = [];

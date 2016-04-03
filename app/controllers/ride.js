@@ -1,6 +1,10 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 
+function sendGoogleAnalytics() {
+  Alloy.Globals.google_analytics_trackScreen("乗車停留所選択画面");
+}
+
 // バス停の名前を取得する
 function getBusStopName() {
   $.activityIndicator.show();
