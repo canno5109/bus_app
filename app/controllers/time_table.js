@@ -135,12 +135,15 @@ function loadHolidayTimeTable() {
       }
       switch(date) {
         case 0:
+        $.timeTableTitle.setText("時刻表（休日）");
         $.listSection.setItems(holidays);
         break;
         case 6:
+        $.timeTableTitle.setText("時刻表（土曜）");
         $.listSection.setItems(saturdays);
         break;
         default:
+        $.timeTableTitle.setText("時刻表（平日）");
         $.listSection.setItems(weekdays);
         break;
       }

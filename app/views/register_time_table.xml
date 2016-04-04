@@ -4,7 +4,7 @@
 		<View id="wholeView">
 			<View id="navView">
 				<Button id="backBtn" onClick="closeWin" />
-				<Label id="timeTableTitle">時刻表（平日）</Label>
+				<Label id="timeTableTitle">時刻表</Label>
 				<Button id="registerBtn" onClick="saveTimeTable" />
 			</View>
 			<Label id="ride_getoff_Title" />

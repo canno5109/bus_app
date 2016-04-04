@@ -4,6 +4,7 @@ var weekdays = [], holidays = [], saturdays = [];
 Alloy.Globals.google_analytics_trackScreen("お気に入り時刻表リスト画面");
 $.ride_getoff_Title.setText("乗車停留所：" + args.rideName + "\n" + "降車停留所：" + args.gettingOffName);
 $.activityIndicator.show();
+var date = new Date().getDay();
 
 function loadWeekdayTimeTable() {
   var url = "https://cryptic-journey-10666.herokuapp.com/system/weekday.json";
@@ -24,7 +25,6 @@ function loadWeekdayTimeTable() {
         };
         weekdays.push(weekdayColumn);
       }
-      $.listSection.setItems(weekdays);
       loadSaturdayTimeTable();
     },
     onerror : function(e) {
@@ -96,6 +96,20 @@ function loadHolidayTimeTable() {
       if (timetableCollection.length > 0) {
         $.registerBtn.setBackgroundImage("/icons/star-full.png");
         $.registerBtn.saved = true;
+      }
+      switch(date) {
+        case 0:
+        $.timeTableTitle.setText("時刻表（休日）");
+        $.listSection.setItems(holidays);
+        break;
+        case 6:
+        $.timeTableTitle.setText("時刻表（土曜）");
+        $.listSection.setItems(saturdays);
+        break;
+        default:
+        $.timeTableTitle.setText("時刻表（平日）");
+        $.listSection.setItems(weekdays);
+        break;
       }
       $.listView.setTouchEnabled(true);
       $.buttonBar.setTouchEnabled(true);
