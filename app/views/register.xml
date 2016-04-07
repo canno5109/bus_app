@@ -6,20 +6,18 @@
 				<View id="navView">
 					<Label id="registerTitle">お気に入り</Label>
 				</View>
-				<ScrollView id="scrollView">
-					<ListView id="listView" onItemclick="openTimeTableWin">
-						<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
-						<Templates>
-							<ItemTemplate name="registerBusStopTemplate">
-								<Label bindId="rideBusStopName" id="rideBusStopName" />
-								<Label bindId="arrow" id="arrow" />
-								<Label bindId="gettingOffBusStopName" id="gettingOffBusStopName" />
-								<Button bindId="detailBtn" id="detailBtn" />
-							</ItemTemplate>
-						</Templates>
-						<ListSection id="listSection" />
-					</ListView>
-				</ScrollView>
+				<ListView id="listView" onItemclick="openTimeTableWin">
+					<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
+					<Templates>
+						<ItemTemplate name="registerBusStopTemplate">
+							<Label bindId="rideBusStopName" id="rideBusStopName" />
+							<Label bindId="arrow" id="arrow" />
+							<Label bindId="gettingOffBusStopName" id="gettingOffBusStopName" />
+							<Button bindId="detailBtn" id="detailBtn" />
+						</ItemTemplate>
+					</Templates>
+					<ListSection id="listSection" />
+				</ListView>
 			</View>
 		</Window>
 	</NavigationWindow>

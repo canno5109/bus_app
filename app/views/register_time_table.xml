@@ -18,17 +18,15 @@
 					</Labels>
 				</ButtonBar>
 			</View>
-			<ScrollView id="scrollView">
-				<ListView id="listView">
-					<Templates>
-						<ItemTemplate name="timeTableTemplate">
-							<Label bindId="hour" id="hour" />
-							<Label bindId="times" id="times" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="listSection" />
-				</ListView>
-			</ScrollView>
+			<ListView id="listView">
+				<Templates>
+					<ItemTemplate name="timeTableTemplate">
+						<Label bindId="hour" id="hour" />
+						<Label bindId="times" id="times" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="listSection" />
+			</ListView>
 		</View>
 	</Window>
 </Alloy>

@@ -66,12 +66,6 @@
   touchEnabled: false
 }
 
-"#scrollView": {
-  width: Ti.UI.FILL,
-  height: Ti.UI.FILL,
-  backgroundColor: "#ffffff"
-}
-
 "#listView": {
   top: 0,
   separatorColor: "#E6E6E6",
