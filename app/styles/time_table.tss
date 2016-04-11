@@ -124,15 +124,3 @@
     fontSize: 20
   }
 }
-
-/*
-"#times": {
-  right: 20,
-  width: Ti.UI.SIZE,
-  height: Ti.UI.SIZE,
-  color: "#333333",
-  font: {
-    fontSize: 14
-  }
-}
-*/
