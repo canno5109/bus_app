@@ -10,12 +10,12 @@
  title: "時刻表"
 }
 
-"#mapTab": {
- icon: "/icons/map.png",
- title: "地図"
-}
-
 "#registerTab": {
   icon: "/icons/time_table.png",
   title: "お気に入り"
+}
+
+"#mapTab": {
+ icon: "/icons/map.png",
+ title: "タイムライン"
 }

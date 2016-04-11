@@ -54,7 +54,7 @@
     <theme>default</theme>
   </mobileweb>
   <modules>
-    <!-- <module platform="iphone">ti.map</module> -->
+    <module platform="iphone">ti.map</module>
     <module platform="iphone" version="3.1.0">analytics.google</module>
   </modules>
   <deployment-targets>
