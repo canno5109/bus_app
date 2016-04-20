@@ -47,7 +47,7 @@ function getBusStopName() {
       $.activityIndicator.hide();
       getBusStopName();
     },
-    timeout : 10000
+    timeout : 15000
   });
   xhr.open("GET", encodeURI(url + "?url=" + "http://gps.iwatebus.or.jp/bls/pc/" + $.args.url));
   xhr.send();

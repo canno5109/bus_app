@@ -46,7 +46,7 @@ function getBusStopName() {
       $.activityIndicator.hide();
       getBusStopName();
     },
-    timeout : 10000
+    timeout : 15000
   });
   xhr.open("GET", url);
   xhr.send();

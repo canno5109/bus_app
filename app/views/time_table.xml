@@ -22,7 +22,6 @@
 				<Templates>
 					<ItemTemplate name="timeTableTemplate">
 						<Label bindId="hour" id="hour" />
-						<Label bindId="times" id="times" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="listSection" />

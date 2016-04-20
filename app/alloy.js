@@ -10,7 +10,7 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-// Alloy.Globals.Map = require('ti.map');
+Alloy.Globals.Map = require('ti.map');
 
 var GA = require('analytics.google');
 GA.trackUncaughtExceptions = true;
