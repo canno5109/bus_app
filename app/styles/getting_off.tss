@@ -89,13 +89,14 @@
   tableSeparatorInsets: { right: 0, left: 0 },
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
-  bubbleParent: false,
   backgroundColor: "#FFFFFF",
   touchEnabled: false
 }
 
 "ItemTemplate": {
-  selectedBackgroundColor: "#FFFFFF"
+  height: 40,
+  backgroundColor: "#FFFFFF",
+  selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
 }
 
 "#busStopName": {

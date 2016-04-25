@@ -12,7 +12,6 @@ function loadBusList() {
 		$.listSection.setItems(timeTableListItems);
 		return;
 	}
-	$.activityIndicator.show();
 	timetableModelCollection.map(function(t) {
 		var timeTableItems = {
 			template: "registerBusStopTemplate",
@@ -42,7 +41,6 @@ function loadBusList() {
 	$.listSection.setItems(timeTableListItems);
 	$.search.setTouchEnabled(true);
 	$.listView.setTouchEnabled(true);
-	$.activityIndicator.hide();
 }
 
 function blurKeyboard(e) {

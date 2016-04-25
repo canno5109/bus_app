@@ -1,7 +1,6 @@
 <Alloy>
 	<NavigationWindow id="navWin">
 		<Window id="registerWin" onFocus="loadBusList">
-			<ActivityIndicator id="activityIndicator" />
 			<View id="wholeView">
 				<View id="navView">
 					<Label id="registerTitle">お気に入り</Label>
@@ -10,9 +9,13 @@
 					<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
 					<Templates>
 						<ItemTemplate name="registerBusStopTemplate">
-							<Label bindId="rideBusStopName" id="rideBusStopName" />
+							<View id="rideView">
+								<Label bindId="rideBusStopName" id="rideBusStopName" />
+							</View>
 							<Label bindId="arrow" id="arrow" />
-							<Label bindId="gettingOffBusStopName" id="gettingOffBusStopName" />
+							<View id="gettingOffView">
+								<Label bindId="gettingOffBusStopName" id="gettingOffBusStopName" />
+							</View>
 							<Button bindId="detailBtn" id="detailBtn" />
 						</ItemTemplate>
 					</Templates>

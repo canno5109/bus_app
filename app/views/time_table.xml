@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="time_tableWin" onOpen="getDateUrl" onFocus="sendGoogleAnalytics">
+	<Window id="time_tableWin" onOpen="getDateUrl" onFocus="sendGoogleAnalytics" onSwipe="swipeToClose">
 		<ActivityIndicator id="activityIndicator" />
 		<View id="wholeView">
 			<View id="navView">

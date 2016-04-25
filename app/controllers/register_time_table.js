@@ -261,3 +261,9 @@ function saveTimeTable(e) {
 function closeWin() {
   $.time_tableWin.close();
 }
+
+function swipeToClose(e) {
+  if (e.direction == "right") {
+    $.time_tableWin.close();
+  }
+}

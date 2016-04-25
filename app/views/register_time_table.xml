@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="time_tableWin" onOpen="loadWeekdayTimeTable">
+	<Window id="time_tableWin" onOpen="loadWeekdayTimeTable" onSwipe="swipeToClose">
 		<ActivityIndicator id="activityIndicator" />
 		<View id="wholeView">
 			<View id="navView">

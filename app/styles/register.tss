@@ -9,25 +9,6 @@
 	height: Ti.UI.FILL,
 }
 
-
-
-"#activityIndicator": {
-  message: "Loading...",
-  indicatorColor: "#ffa500",
-  width: "50%",
-  height: "20%",
-  backgroundColor: "#F5F5F5",
-  color: "#ffa500",
-  font: {
-    fontSize: 18,
-    fontWeight: "bold"
-  },
-  borderColor: "#E6E6E6",
-  borderWidth: 5,
-  borderRadius: 10,
-  zIndex: 1
-}
-
 "#wholeView": {
 	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
@@ -82,19 +63,33 @@
 }
 
 "ItemTemplate": {
-  selectedBackgroundColor: "#FFFFFF",
-  height: 80,
-  backgroundColor: "#FFFFFF"
- }
+  height: 100,
+  backgroundColor: "#FFFFFF",
+  selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
+}
 
-"#rideBusStopName": {
+"#rideView": {
   top: 10,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
-  color: "#333333",
+  backgroundColor: "#ff6565",
+  borderColor: "#ff6565",
+  borderRadius: 5
+}
+
+"#rideBusStopName": {
+  top: 5,
+  left: 5,
+  right: 5,
+  bottom: 5,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#ffffff",
   font: {
-    fontSize: 14
-  }
+    fontSize: 14,
+    fontWeight: "bold"
+  },
+  backgroundColor: "#ff6565"
 }
 
 "#arrow": {
@@ -102,18 +97,33 @@
   height: Ti.UI.SIZE,
   color: "#333333",
   font: {
-    fontSize: 14
+    fontSize: 14,
+    fontWeight: "bold"
   }
 }
 
-"#gettingOffBusStopName": {
+"#gettingOffView": {
   bottom: 10,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
-  color: "#333333",
+  backgroundColor: "#6565ff",
+  borderColor: "#6565ff",
+  borderRadius: 5
+}
+
+"#gettingOffBusStopName": {
+  top: 5,
+  left: 5,
+  right: 5,
+  bottom: 5,
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+  color: "#ffffff",
   font: {
-    fontSize: 14
-  }
+    fontSize: 14,
+    fontWeight: "bold"
+  },
+  backgroundColor: "#6565ff"
 }
 
 "#detailBtn": {
