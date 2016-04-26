@@ -110,10 +110,10 @@
 }
 
 "ItemTemplate": {
-  selectedBackgroundColor: "#FFFFFF",
   height: 40,
-  backgroundColor: "#FFFFFF"
- }
+  backgroundColor: "#FFFFFF",
+  selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
+}
 
 "#hour": {
   left: 15,

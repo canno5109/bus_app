@@ -74,3 +74,9 @@ function openTimeTableWin(e) {
 function closeWin() {
   $.gettingOffWin.close();
 }
+
+function swipeToClose(e) {
+  if (e.direction == "right") {
+    $.gettingOffWin.close();
+  }
+}
