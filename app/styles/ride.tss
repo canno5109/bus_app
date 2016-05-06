@@ -1,4 +1,4 @@
-"#navWin": {
+"#navWin[platform=ios]": {
   navBarHidden: true
 }
 
@@ -81,9 +81,11 @@
 
 "ItemTemplate": {
   height: 40,
-  backgroundColor: "#FFFFFF",
+  backgroundColor: "#FFFFFF"
+},
+"ItemTemplate[platform=ios]": {
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
- }
+}
 
 "#busStopName": {
   left: 15,

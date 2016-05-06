@@ -111,7 +111,9 @@
 
 "ItemTemplate": {
   height: 40,
-  backgroundColor: "#FFFFFF",
+  backgroundColor: "#FFFFFF"
+},
+"ItemTemplate[platform=ios]": {
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
 }
 

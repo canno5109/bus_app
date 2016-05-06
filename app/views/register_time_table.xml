@@ -1,4 +1,6 @@
 <Alloy>
+
+	<!-- iOS -->
 	<Window id="time_tableWin" onOpen="loadWeekdayTimeTable" onSwipe="swipeToClose">
 		<ActivityIndicator id="activityIndicator" />
 		<View id="wholeView">
@@ -28,4 +30,36 @@
 			</ListView>
 		</View>
 	</Window>
+
+	<!-- Android -->
+	<Window id="time_tableWin" onOpen="loadWeekdayTimeTable">
+		<ActivityIndicator id="activityIndicator" />
+		<View id="wholeView">
+			<View id="navView">
+				<Button id="backBtn" onClick="closeWin" />
+				<Label id="timeTableTitle">時刻表</Label>
+				<Button id="registerBtn" onClick="saveTimeTable" />
+			</View>
+			<Label id="ride_getoff_Title" />
+			<View class="line" />
+			<View id="buttonBarView">
+				<ButtonBar id="buttonBar" platform="ios" onClick="changeTimeTable">
+					<Labels>
+						<Label>平日</Label>
+						<Label>土曜</Label>
+						<Label>休日</Label>
+					</Labels>
+				</ButtonBar>
+			</View>
+			<ListView id="listView">
+				<Templates>
+					<ItemTemplate name="timeTableTemplate">
+						<Label bindId="hour" id="hour" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="listSection" />
+			</ListView>
+		</View>
+	</Window>
+
 </Alloy>

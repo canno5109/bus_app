@@ -1,5 +1,7 @@
 <Alloy>
-	<NavigationWindow id="navWin">
+	
+	<!-- iOS -->
+	<NavigationWindow id="navWin" platform="ios">
 		<Window id="registerWin" onFocus="loadBusList">
 			<View id="wholeView">
 				<View id="navView">
@@ -24,4 +26,30 @@
 			</View>
 		</Window>
 	</NavigationWindow>
+
+	<!-- Android -->
+	<Window id="registerWin" onFocus="loadBusList" platform="android">
+		<View id="wholeView">
+			<View id="navView">
+				<Label id="registerTitle">お気に入り</Label>
+			</View>
+			<ListView id="listView" onItemclick="openTimeTableWin">
+				<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
+				<Templates>
+					<ItemTemplate name="registerBusStopTemplate">
+						<View id="rideView">
+							<Label bindId="rideBusStopName" id="rideBusStopName" />
+						</View>
+						<Label bindId="arrow" id="arrow" />
+						<View id="gettingOffView">
+							<Label bindId="gettingOffBusStopName" id="gettingOffBusStopName" />
+						</View>
+						<Button bindId="detailBtn" id="detailBtn" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="listSection" />
+			</ListView>
+		</View>
+	</Window>
+
 </Alloy>
