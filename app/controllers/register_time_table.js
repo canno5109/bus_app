@@ -1,9 +1,7 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 var weekdays = [], holidays = [], saturdays = [];
-if (OS_IOS) {
-  Alloy.Globals.google_analytics_trackScreen("お気に入り時刻表リスト画面");
-}
+Alloy.Globals.google_analytics_trackScreen("お気に入り時刻表リスト画面");
 $.ride_getoff_Title.setText("乗車停留所：" + args.rideName + "\n" + "降車停留所：" + args.gettingOffName);
 $.activityIndicator.show();
 var date = new Date();

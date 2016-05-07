@@ -61,26 +61,14 @@ function openTimeTableWin(e) {
   var item = e.section.getItemAt(e.itemIndex);
   var name = item["busStopName"]["text"];
   var url = item["url"];
-
-  if (OS_IOS) {
-    var arg = {
-      navWin: $.args.navWin,
-      rideName: $.args.name,
-      getting_offName: name,
-      url: url
-    };
-    var timeTableWin = Alloy.createController('time_table', arg).getView();
-    $.args.navWin.openWindow(timeTableWin);
-  }
-
-  if (OS_ANDROID) {
-    var arg = {
-      rideName: $.args.name,
-      getting_offName: name,
-      url: url
-    };
-    var timeTableWin = Alloy.createController('time_table', arg).getView().open();
-  }
+  var arg = {
+    navWin: $.args.navWin,
+    rideName: $.args.name,
+    getting_offName: name,
+    url: url
+  };
+  var timeTableWin = Alloy.createController('time_table', arg).getView();
+  $.args.navWin.openWindow(timeTableWin);
 }
 
 function closeWin() {

@@ -1,7 +1,5 @@
 <Alloy>
-
-	<!-- iOS -->
-	<NavigationWindow id="navWin" platform="ios">
+	<NavigationWindow id="navWin">
 		<Window id="rideWin" onOpen="getBusStopName" onFocus="sendGoogleAnalytics">
 			<ActivityIndicator id="activityIndicator" />
 			<View id="wholeView">
@@ -21,25 +19,4 @@
 			</View>
 		</Window>
 	</NavigationWindow>
-
-	<!-- Android -->
-	<Window id="rideWin" onOpen="getBusStopName" platform="android">
-		<ActivityIndicator id="activityIndicator" />
-		<View id="wholeView">
-			<View id="navView">
-				<Label id="rideTitle">乗車停留所選択</Label>
-			</View>
-			<ListView id="listView" onItemclick="openGettingOffWin">
-				<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
-				<Templates>
-					<ItemTemplate name="busStopTemplate">
-						<Label bindId="busStopName" id="busStopName" />
-						<Button bindId="detailBtn" id="detailBtn" />
-					</ItemTemplate>
-				</Templates>
-				<ListSection id="listSection" />
-			</ListView>
-		</View>
-	</Window>
-
 </Alloy>

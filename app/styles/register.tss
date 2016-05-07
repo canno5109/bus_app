@@ -1,4 +1,4 @@
-"#navWin[platform=ios]": {
+"#navWin": {
   navBarHidden: true
 }
 
@@ -52,20 +52,19 @@
 "#listView": {
   top: 0,
   separatorColor: "#E6E6E6",
-  rowSeparatorInsets: { right: 0, left: 0 },
-  // tableSeparatorInsets: { right: 0, left: 0 },
+  //separatorInsets: { right: 0, left: 0 },
+  tableSeparatorInsets: { right: 0, left: 0 },
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   bubbleParent: false,
   backgroundColor: "#FFFFFF",
-  touchEnabled: false
+  touchEnabled: false,
+  keepSectionsInSearch: true
 }
 
 "ItemTemplate": {
   height: 100,
-  backgroundColor: "#FFFFFF"
-},
-"ItemTemplate[platform=ios]": {
+  backgroundColor: "#FFFFFF",
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
 }
 

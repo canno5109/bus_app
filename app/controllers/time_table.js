@@ -281,9 +281,7 @@ function saveTimeTable(e) {
       holidayUrl: dates[2].url
     });
     tModel.save();
-    if (OS_IOS) {
-      Alloy.Globals.google_analytics_trackEvent('時刻表登録', 'click', args.rideName + " → " + args.getting_offName);
-    }
+    Alloy.Globals.google_analytics_trackEvent('時刻表登録', 'click', args.rideName + " → " + args.getting_offName);
     $.registerBtn.setBackgroundImage("/icons/star-full.png");
     $.registerBtn.saved = true;
   } else {

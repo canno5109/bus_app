@@ -2,9 +2,7 @@
 var args = $.args;
 
 function loadBusList() {
-	if (OS_IOS) {
-		Alloy.Globals.google_analytics_trackScreen("お気に入りバス停リスト画面");
-	}
+	Alloy.Globals.google_analytics_trackScreen("お気に入りバス停リスト画面");
 	$.search.setTouchEnabled(false);
 	$.listView.setTouchEnabled(false);
 	var timetableModelCollection = Alloy.createCollection("timetable");
@@ -59,12 +57,5 @@ function openTimeTableWin(e) {
 		holidayUrl: item["holidayUrl"]
 	};
   var timeTableWin = Alloy.createController('register_time_table', arg).getView();
-
-	if (OS_IOS) {
-  	$.navWin.openWindow(timeTableWin);
-	}
-
-	if (OS_ANDROID) {
-		timeTableWin.open();
-	}
+  $.navWin.openWindow(timeTableWin);
 }
