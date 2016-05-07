@@ -10,8 +10,10 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-Alloy.Globals.Map = require('ti.map');
+/* 地図機能は今後導入 */
+// Alloy.Globals.Map = require('ti.map');
 
+/* Google Analytics */
 var GA = require('analytics.google');
 GA.trackUncaughtExceptions = true;
 GA.optOut = false;

@@ -263,6 +263,9 @@ function closeWin() {
 }
 
 function swipeToClose(e) {
+  if (OS_ANDROID) {
+    return;
+  }
   if (e.direction == "right") {
     $.time_tableWin.close();
   }

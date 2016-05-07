@@ -10,6 +10,6 @@
 		<Tab id="mapTab">
 			<Require type="view" src="map" />
 		</Tab>
-	-->
+		-->
 	</TabGroup>
 </Alloy>

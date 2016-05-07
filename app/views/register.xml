@@ -1,5 +1,5 @@
 <Alloy>
-	<NavigationWindow id="navWin">
+	<NavigationWindow id="navWin" platform="ios">
 		<Window id="registerWin" onFocus="loadBusList">
 			<View id="wholeView">
 				<View id="navView">

@@ -60,11 +60,21 @@ function openGettingOffWin(e) {
   var item = e.section.getItemAt(e.itemIndex);
   var name = item["busStopName"]["text"];
   var url = item["url"];
-  var arg = {
-    navWin: $.navWin,
-    name: name,
-    url: url
-  };
-  var gettingOffWin = Alloy.createController('getting_off', arg).getView();
-  $.navWin.openWindow(gettingOffWin);
+
+  if (OS_IOS) {
+    var arg = {
+      navWin: $.navWin,
+      name: name,
+      url: url
+    };
+    var gettingOffWin = Alloy.createController('getting_off', arg).getView();
+    $.navWin.openWindow(gettingOffWin);
+  } else if (OS_ANDROID) {
+    var arg = {
+      name: name,
+      url: url
+    };
+    var gettingOffWin = Alloy.createController('getting_off', arg).getView();
+    gettingOffWin.open();
+  }
 }

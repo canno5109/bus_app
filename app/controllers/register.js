@@ -57,5 +57,9 @@ function openTimeTableWin(e) {
 		holidayUrl: item["holidayUrl"]
 	};
   var timeTableWin = Alloy.createController('register_time_table', arg).getView();
-  $.navWin.openWindow(timeTableWin);
+	if (OS_IOS) {
+  	$.navWin.openWindow(timeTableWin);
+	} else if (OS_ANDROID) {
+		timeTableWin.open();
+	}
 }

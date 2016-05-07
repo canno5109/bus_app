@@ -1,5 +1,5 @@
 <Alloy>
-	<NavigationWindow id="navWin">
+	<NavigationWindow id="navWin" platform="ios">
 		<Window id="rideWin" onOpen="getBusStopName" onFocus="sendGoogleAnalytics">
 			<ActivityIndicator id="activityIndicator" />
 			<View id="wholeView">

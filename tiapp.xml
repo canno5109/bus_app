@@ -43,6 +43,11 @@
     </plist>
   </ios>
   <android xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest android:versionCode="1" android:versionName="1.0">
+      <application>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCmUfz48jOhXc8u3XuwOQZvdfdalUPpE8k" />
+      </application>
+    </manifest>
   </android>
   <mobileweb>
     <precache>
@@ -54,8 +59,10 @@
     <theme>default</theme>
   </mobileweb>
   <modules>
-    <module platform="iphone">ti.map</module>
+    <!-- <module platform="iphone">ti.map</module> -->
     <module platform="iphone" version="3.1.0">analytics.google</module>
+    <!-- <module platform="android">ti.map</module> -->
+    <module platform="android" version="3.1.0">analytics.google</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
@@ -66,6 +73,6 @@
   </deployment-targets>
   <sdk-version>5.2.0.GA</sdk-version>
   <plugins>
-    <plugin version="1.8.2">ti.alloy</plugin>
+    <plugin version="1.0">ti.alloy</plugin>
   </plugins>
 </ti:app>
