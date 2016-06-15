@@ -9,23 +9,23 @@
 	height: Ti.UI.FILL,
 }
 
-"#wholeView": {
+".container": {
 	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
   layout: "vertical"
 }
 
-"#navView": {
+".titleContainer": {
   width: Ti.UI.FILL,
   height: 30,
   backgroundColor: "#ffa500"
 },
-"#navView[platform=ios]": {
+".titleContainer[platform=ios]": {
   top: 20
 }
 
-"#registerTitle": {
+".registerTitle": {
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
   color: "#333333",
@@ -35,34 +35,25 @@
   }
 }
 
-".line": {
-  width: Ti.UI.FILL,
-  height: 1,
-  borderColor: "#E6E6E6"
-}
-
-"#search": {
+"#registerTimetableSearch": {
   showCancel: true,
   width: Ti.UI.FILL,
   height: 43,
-  hintText: "バス停を検索",
-  touchEnabled: false
+  hintText: "バス停を検索"
 }
 
-"#listView": {
+"#registerTimetableList": {
   top: 0,
   separatorColor: "#E6E6E6",
-  //separatorInsets: { right: 0, left: 0 },
   tableSeparatorInsets: { right: 0, left: 0 },
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   bubbleParent: false,
   backgroundColor: "#FFFFFF",
-  touchEnabled: false,
   keepSectionsInSearch: true
 }
 
-"ItemTemplate": {
+".registerTimetableItemTemplate": {
   height: 100,
   backgroundColor: "#FFFFFF",
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE

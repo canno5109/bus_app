@@ -2,19 +2,26 @@
 	<NavigationWindow id="navWin">
 		<Window id="rideWin" onOpen="getBusStopName" onFocus="sendGoogleAnalytics">
 			<ActivityIndicator id="activityIndicator" />
-			<View id="wholeView">
-				<View id="navView">
-					<Label id="rideTitle">乗車停留所選択</Label>
+			<View id="errorMessage">
+				<Label class="errorMessageTitle">時刻表を取得できません。</Label>
+				<Label class="errorMessageText">ネットワークを確認するか、</Label>
+				<Label class="errorMessageText">しばらくしてから再試行してください。</Label>
+				<Button class="reload" onClick="getBusStopName">再試行する</Button>
+			</View>
+
+			<View class="container">
+				<View class="titleContainer">
+					<Label class="rideTitle">乗車停留所選択</Label>
 				</View>
-				<ListView id="listView" onItemclick="openGettingOffWin">
-					<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
+				<ListView id="rideTimetableList" onItemclick="openGettingOffWin">
+					<SearchBar id="rideTimetableSearch" onCancel="blurKeyboard" onReturn="blurKeyboard" />
 					<Templates>
-						<ItemTemplate name="busStopTemplate">
-							<Label bindId="busStopName" id="busStopName" />
-							<Button bindId="detailBtn" id="detailBtn" />
+						<ItemTemplate class="rideTimetableItemTemplate" name="rideTimetable">
+							<Label bindId="busStopName" class="busStopName" />
+							<Button bindId="detailBtn" class="detailBtn" />
 						</ItemTemplate>
 					</Templates>
-					<ListSection id="listSection" />
+					<ListSection id="rideTimetableSection" />
 				</ListView>
 			</View>
 		</Window>

@@ -1,25 +1,37 @@
 <Alloy>
+	<Collection src="timetable" />
 	<NavigationWindow id="navWin">
 		<Window id="registerWin" onFocus="loadBusList">
-			<View id="wholeView">
-				<View id="navView">
-					<Label id="registerTitle">お気に入り</Label>
+			<View class="container">
+				<View class="titleContainer">
+					<Label class="registerTitle">お気に入り</Label>
 				</View>
-				<ListView id="listView" onItemclick="openTimeTableWin">
-					<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
+				<ListView id="registerTimetableList" onItemclick="openTimeTableWin" defaultItemTemplate="registerTimetable">
+					<SearchBar id="registerTimetableSearch" onCancel="blurKeyboard" onReturn="blurKeyboard" />
 					<Templates>
-						<ItemTemplate name="registerBusStopTemplate">
+						<ItemTemplate class="registerTimetableItemTemplate" name="registerTimetable">
 							<View id="rideView">
 								<Label bindId="rideBusStopName" id="rideBusStopName" />
 							</View>
-							<Label bindId="arrow" id="arrow" />
+							<Label id="arrow">↓</Label>
 							<View id="gettingOffView">
 								<Label bindId="gettingOffBusStopName" id="gettingOffBusStopName" />
 							</View>
-							<Button bindId="detailBtn" id="detailBtn" />
+							<Button id="detailBtn" title=">" />
 						</ItemTemplate>
 					</Templates>
-					<ListSection id="listSection" />
+					<ListSection dataCollection="timetable" dataTransform="transformTimetable" dataFunction="updateTimetable" dataFilter="filterTimetable">
+						<ListItem template="registerTimetable" searchableText="{searchableText}"
+							rideBusStopName:text="{rideName}"
+							gettingOffBusStopName:text="{gettingOffName}"
+							rideName="{rideName}"
+							gettingOffName="{gettingOffName}"
+							weekdayUrl="{weekdayUrl}"
+							saturdayUrl="{saturdayUrl}"
+							holidayUrl="{holidayUrl}"
+							>
+						</ListItem>
+					</ListSection>
 				</ListView>
 			</View>
 		</Window>

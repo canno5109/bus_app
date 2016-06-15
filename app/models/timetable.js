@@ -1,11 +1,11 @@
 exports.definition = {
 	config: {
 		columns: {
-		    "rideName": "text",
-		    "gettingOffName": "text",
-		    "weekdayUrl": "text",
-		    "saturdayUrl": "text",
-		    "holidayUrl": "text"
+		    rideName: "text",
+		    gettingOffName: "text",
+		    weekdayUrl: "text",
+		    saturdayUrl: "text",
+		    holidayUrl: "text"
 		},
 		adapter: {
 			type: "sql",

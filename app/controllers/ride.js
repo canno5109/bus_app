@@ -3,58 +3,50 @@ var args = $.args;
 
 function sendGoogleAnalytics() {
   Alloy.Globals.google_analytics_trackScreen("乗車停留所選択画面");
-}
+};
 
 // バス停の名前を取得する
 function getBusStopName() {
+  $.errorMessage.setVisible(false);
   $.activityIndicator.show();
   var busStopNames = [];
   var url = "https://cryptic-journey-10666.herokuapp.com/system/ride.json";
   var xhr = Ti.Network.createHTTPClient({
     onload : function() {
       var json = JSON.parse(this.responseText);
-
-      for (var i = 0; i < json.length; i++) {
-        var names = {
-          template: "busStopTemplate",
+      _.each(json, function(ride) {
+        busStopNames.push({
+          template: "rideTimetable",
           properties: {
-            searchableText: json[i].bus_stop_name
+            searchableText: ride.bus_stop_name
           },
-          "busStopName": {
-            text: json[i].bus_stop_name
+          busStopName: {
+            text: ride.bus_stop_name
           },
-          "detailBtn": {
+          detailBtn: {
             title: ">"
           },
-          "url": json[i].bus_stop_url
-        };
-        busStopNames.push(names);
-      }
-      $.listSection.setItems(busStopNames);
+          url: ride.bus_stop_url
+        });
+      });
+      $.rideTimetableSection.setItems(busStopNames);
       $.activityIndicator.hide();
-      $.listView.setTouchEnabled(true);
-      $.search.setTouchEnabled(true);
+      $.rideTimetableList.setTouchEnabled(true);
+      $.rideTimetableSearch.setTouchEnabled(true);
     },
     onerror : function(e) {
-      Ti.API.debug(e.error);
-      if (!Ti.Network.online) {
-        Ti.UI.createAlertDialog({title: "エラー", message: e.error}).show();
-        $.activityIndicator.hide();
-        return;
-      }
-      Ti.UI.createAlertDialog({title: "エラー", message: "データの取得に失敗しました。"}).show();
       $.activityIndicator.hide();
-      getBusStopName();
+      $.errorMessage.setVisible(true);
     },
     timeout : 15000
   });
   xhr.open("GET", url);
   xhr.send();
-}
+};
 
 function blurKeyboard(e) {
   e.source.blur();
-}
+};
 
 function openGettingOffWin(e) {
   var item = e.section.getItemAt(e.itemIndex);
@@ -65,6 +57,6 @@ function openGettingOffWin(e) {
     name: name,
     url: url
   };
-  var gettingOffWin = Alloy.createController('getting_off', arg).getView();
+  var gettingOffWin = Alloy.createController("getting_off", arg).getView();
   $.navWin.openWindow(gettingOffWin);
-}
+};

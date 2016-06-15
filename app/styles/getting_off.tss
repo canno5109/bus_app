@@ -22,23 +22,60 @@
   zIndex: 1
 }
 
-"#wholeView": {
+"#errorMessage": {
+  visible: false,
+  top: 50,
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF",
+  zIndex: 1,
+  layout: "vertical"
+},
+".errorMessageTitle": {
+  top: "30%",
+  color: "#333333",
+  font: {
+    fontSize: 18
+  }
+},
+".errorMessageText": {
+  top: 10,
+  color: "#cccccc",
+  font: {
+    fontSize: 14
+  }
+},
+".reload": {
+  top: 30,
+  color: "#FFFFFF",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  backgroundColor: "#ffa500",
+  width: 150,
+  height: 50,
+  borderColor: "#ffa500",
+  borderRadius: 10
+}
+
+".container": {
 	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
   layout: "vertical"
 }
 
-"#navView": {
+".titleContainer": {
   width: Ti.UI.FILL,
   height: 30,
   backgroundColor: "#ffa500"
 },
-"#navView[platform=ios]": {
+".titleContainer[platform=ios]": {
   top: 20
 }
 
-"#backBtn": {
+".backBtn": {
   backgroundImage: "/icons/back.png",
   backgroundColor: "transparent",
   width: 30,
@@ -46,7 +83,7 @@
   left: 8
 }
 
-"#gettingOffTitle": {
+".gettingOffTitle": {
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
   color: "#333333",
@@ -54,12 +91,6 @@
     fontSize: 18,
     fontWeight: "bold"
   }
-}
-
-".line": {
-  width: Ti.UI.FILL,
-  height: 1,
-  borderColor: "#E6E6E6"
 }
 
 "#rideTitle": {
@@ -73,7 +104,17 @@
   backgroundColor: "#ffa500"
 }
 
-"#search": {
+"#gettingOffTimetableList": {
+  top: 0,
+  separatorColor: "#E6E6E6",
+  tableSeparatorInsets: { right: 0, left: 0 },
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF",
+  touchEnabled: false
+}
+
+"#gettingOffTimetableSearch": {
   showCancel: true,
   bubbleParent: false,
   width: Ti.UI.FILL,
@@ -82,24 +123,13 @@
   touchEnabled: false
 }
 
-"#listView": {
-  top: 0,
-  separatorColor: "#E6E6E6",
-  //separatorInsets: { right: 0, left: 0 },
-  tableSeparatorInsets: { right: 0, left: 0 },
-  width: Ti.UI.FILL,
-  height: Ti.UI.FILL,
-  backgroundColor: "#FFFFFF",
-  touchEnabled: false
-}
-
-"ItemTemplate": {
+".gettingOffTimetableItemTemplate": {
   height: 40,
   backgroundColor: "#FFFFFF",
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
 }
 
-"#busStopName": {
+".busStopName": {
   left: 15,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
@@ -109,7 +139,7 @@
   }
 }
 
-"#detailBtn": {
+".detailBtn": {
   right: 10,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,

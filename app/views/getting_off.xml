@@ -1,21 +1,28 @@
 <Alloy>
 	<Window id="gettingOffWin" onOpen="getBusStopName" onFocus="sendGoogleAnalytics" onSwipe="swipeToClose">
 		<ActivityIndicator id="activityIndicator" />
-		<View id="wholeView">
-			<View id="navView">
-				<Button id="backBtn" onClick="closeWin" />
-				<Label id="gettingOffTitle">降車停留所選択</Label>
+		<View id="errorMessage">
+			<Label class="errorMessageTitle">時刻表を取得できません。</Label>
+			<Label class="errorMessageText">ネットワークを確認するか、</Label>
+			<Label class="errorMessageText">しばらくしてから再試行してください。</Label>
+			<Button class="reload" onClick="getBusStopName">再試行する</Button>
+		</View>
+
+		<View class="container">
+			<View class="titleContainer">
+				<Button class="backBtn" onClick="closeWin" />
+				<Label class="gettingOffTitle">降車停留所選択</Label>
 			</View>
 			<Label id="rideTitle" />
-			<ListView id="listView" onItemclick="openTimeTableWin">
-				<SearchBar id="search" onCancel="blurKeyboard" onReturn="blurKeyboard" />
+			<ListView id="gettingOffTimetableList" onItemclick="openTimeTableWin">
+				<SearchBar id="gettingOffTimetableSearch" onCancel="blurKeyboard" onReturn="blurKeyboard" />
 				<Templates>
-					<ItemTemplate name="busStopTemplate" height="40" backgroundColor="#ffffff">
-						<Label bindId="busStopName" id="busStopName" />
-						<Button bindId="detailBtn" id="detailBtn" />
+					<ItemTemplate class="gettingOffTimetableItemTemplate" name="gettingOffTimetable">
+						<Label bindId="busStopName" class="busStopName" />
+						<Button bindId="detailBtn" class="detailBtn" />
 					</ItemTemplate>
 				</Templates>
-				<ListSection id="listSection" />
+				<ListSection id="gettingOffTimetableSection" />
 			</ListView>
 		</View>
 	</Window>

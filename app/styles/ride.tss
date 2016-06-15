@@ -26,23 +26,60 @@
   zIndex: 1
 }
 
-"#wholeView": {
+"#errorMessage": {
+  visible: false,
+  top: 50,
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF",
+  zIndex: 1,
+  layout: "vertical"
+},
+".errorMessageTitle": {
+  top: "30%",
+  color: "#333333",
+  font: {
+    fontSize: 18
+  }
+},
+".errorMessageText": {
+  top: 10,
+  color: "#cccccc",
+  font: {
+    fontSize: 14
+  }
+},
+".reload": {
+  top: 30,
+  color: "#FFFFFF",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  backgroundColor: "#ffa500",
+  width: 150,
+  height: 50,
+  borderColor: "#ffa500",
+  borderRadius: 10
+}
+
+".container": {
 	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL,
   layout: "vertical"
 }
 
-"#navView": {
+".titleContainer": {
   width: Ti.UI.FILL,
   height: 30,
   backgroundColor: "#ffa500"
 },
-"#navView[platform=ios]": {
+".titleContainer[platform=ios]": {
   top: 20
 }
 
-"#rideTitle": {
+".rideTitle": {
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
   color: "#333333",
@@ -52,13 +89,7 @@
   }
 }
 
-".line": {
-  width: Ti.UI.FILL,
-  height: 1,
-  borderColor: "#E6E6E6"
-}
-
-"#search": {
+"#rideTimetableSearch": {
   showCancel: true,
   width: Ti.UI.FILL,
   height: 43,
@@ -66,7 +97,7 @@
   touchEnabled: false
 }
 
-"#listView": {
+"#rideTimetableList": {
   top: 0,
   separatorColor: "#E6E6E6",
   //separatorInsets: { right: 0, left: 0 },
@@ -79,13 +110,13 @@
   keepSectionsInSearch: true
 }
 
-"ItemTemplate": {
+".rideTimetableItemTemplate": {
   height: 40,
   backgroundColor: "#FFFFFF",
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
  }
 
-"#busStopName": {
+".busStopName": {
   left: 15,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
@@ -95,7 +126,7 @@
   }
 }
 
-"#detailBtn": {
+".detailBtn": {
   right: 10,
   width: Ti.UI.SIZE,
   height: Ti.UI.SIZE,
