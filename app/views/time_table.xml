@@ -1,6 +1,13 @@
 <Alloy>
 	<Window id="time_tableWin" onOpen="getDateUrl" onFocus="sendGoogleAnalytics" onSwipe="swipeToClose">
 		<ActivityIndicator id="activityIndicator" />
+		<View id="errorMessage">
+			<Label class="errorMessageTitle">時刻表を取得できません。</Label>
+			<Label class="errorMessageText">ネットワークを確認するか、</Label>
+			<Label class="errorMessageText">しばらくしてから再試行してください。</Label>
+			<Button class="reload" onClick="getDateUrl">再試行する</Button>
+		</View>
+
 		<View id="wholeView">
 			<View id="navView">
 				<Button id="backBtn" onClick="closeWin" />

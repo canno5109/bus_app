@@ -1,6 +1,6 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
-var dates = [], weekdays = [], holidays = [], saturdays = [];
+var dates, weekdays, holidays, saturdays;
 $.ride_getoff_Title.setText("乗車停留所：" + args.rideName + "\n" + "降車停留所：" + args.getting_offName);
 $.activityIndicator.show();
 var date = new Date();
@@ -13,10 +13,15 @@ function sendGoogleAnalytics() {
 
 // 平日・土曜・休日の時刻表URLを取得
 function getDateUrl() {
+  $.errorMessage.setVisible(false);
+  $.listView.setTouchEnabled(false);
+  $.buttonBar.setTouchEnabled(false);
+  $.registerBtn.setTouchEnabled(false);
   var url = "https://cryptic-journey-10666.herokuapp.com/system/relevant_system.json";
   Ti.API.debug(encodeURI(url + "?url=" + "http://gps.iwatebus.or.jp/bls/pc/" + args.url));
   var xhr = Ti.Network.createHTTPClient({
     onload : function() {
+      dates = [];
       var json = JSON.parse(this.responseText);
 
       for (var i = 0; i < json.length; i++) {
@@ -29,13 +34,7 @@ function getDateUrl() {
       loadWeekdayTimeTable();
     },
     onerror : function(e) {
-      Ti.API.debug(e);
-      if (!Ti.Network.online) {
-        Ti.UI.createAlertDialog({title: "エラー", message: e.error}).show();
-        $.activityIndicator.hide();
-        return;
-      }
-      Ti.UI.createAlertDialog({title: "エラー", message: "データの取得に失敗しました。"}).show();
+      $.errorMessage.setVisible(true);
       $.activityIndicator.hide();
     },
     timeout : 10000
@@ -50,6 +49,7 @@ function loadWeekdayTimeTable() {
   var xhr = Ti.Network.createHTTPClient({
     onload : function() {
       var json = JSON.parse(this.responseText);
+      weekdays = [];
 
       var trimTimesData = [];
       for (var j = 0; j < json.length; j++) {
@@ -79,9 +79,8 @@ function loadWeekdayTimeTable() {
       loadSaturdayTimeTable();
     },
     onerror : function(e) {
-      Ti.API.debug(e);
-      Ti.UI.createAlertDialog({title: "エラー", message: "データの取得に失敗しました。"}).show();
       $.listView.setTouchEnabled(true);
+      $.errorMessage.setVisible(true);
       $.activityIndicator.hide();
     },
     timeout : 10000
@@ -96,6 +95,7 @@ function loadSaturdayTimeTable() {
   var xhr = Ti.Network.createHTTPClient({
     onload : function() {
       var json = JSON.parse(this.responseText);
+      saturdays = [];
 
       var trimTimesData = [];
       for (var j = 0; j < json.length; j++) {
@@ -125,8 +125,7 @@ function loadSaturdayTimeTable() {
       loadHolidayTimeTable();
     },
     onerror : function(e) {
-      Ti.API.debug(e);
-      Ti.UI.createAlertDialog({title: "エラー", message: "データの取得に失敗しました。"}).show();
+      $.errorMessage.setVisible(true);
       $.listView.setTouchEnabled(true);
       $.activityIndicator.hide();
     },
@@ -142,6 +141,7 @@ function loadHolidayTimeTable() {
   var xhr = Ti.Network.createHTTPClient({
     onload : function() {
       var json = JSON.parse(this.responseText);
+      holidays = [];
 
       var trimTimesData = [];
       for (var j = 0; j < json.length; j++) {
@@ -198,8 +198,7 @@ function loadHolidayTimeTable() {
       $.activityIndicator.hide();
     },
     onerror : function(e) {
-      Ti.API.debug(e);
-      Ti.UI.createAlertDialog({title: "エラー", message: "データの取得に失敗しました。"}).show();
+      $.errorMessage.setVisible(true);
       $.listView.setTouchEnabled(true);
       $.buttonBar.setTouchEnabled(true);
       $.activityIndicator.hide();

@@ -22,6 +22,43 @@
   zIndex: 1
 }
 
+"#errorMessage": {
+  visible: false,
+  top: 80,
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF",
+  zIndex: 1,
+  layout: "vertical"
+},
+".errorMessageTitle": {
+  top: "30%",
+  color: "#333333",
+  font: {
+    fontSize: 18
+  }
+},
+".errorMessageText": {
+  top: 10,
+  color: "#cccccc",
+  font: {
+    fontSize: 14
+  }
+},
+".reload": {
+  top: 30,
+  color: "#FFFFFF",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  backgroundColor: "#ffa500",
+  width: 150,
+  height: 50,
+  borderColor: "#ffa500",
+  borderRadius: 10
+}
+
 "#wholeView": {
 	backgroundColor: "#ffa500",
 	width: Ti.UI.FILL,
